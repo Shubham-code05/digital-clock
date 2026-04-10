@@ -1,0 +1,209 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./morning\ img.jpg');
+    background-size: cover;
+    object-position:center;
+}
+.degitalclock{
+    text-align: center;
+}
+.degitalclock >h1{
+    margin-bottom: 50px;
+    font-size: 50px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: rgba(128, 0, 128, 0.582);
+    text-shadow: 1px 1px 1px black;
+}
+
+.clock{
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+.clockbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.timetext{
+    height: 80px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(102, 0, 255, 0.566);
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+}
+.time{
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+    background-color:rgba(6, 2, 111, 0.804);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+ }
+#ampm{
+    background-color: green;
+}
+
+@media screen and (max-width:600px) {
+    .degitalclock >h1{
+        font-size: 35px;
+    }
+    .clock{
+        gap: 10px;
+    }
+    .timetext{
+        height: 60px;
+        width: 70px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .time{
+        width: 70px;
+        padding:10px 5px;
+        font-size: 14px;
+    }
+
+} */
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./morning\ img.jpg');
+    background-size: cover;
+    background-position: center;
+    /* backdrop-filter: blur(20px); */
+}
+
+.degitalclock {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.degitalclock > h1 {
+    margin-bottom: 30px;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px white;
+    }
+    100% {
+        text-shadow: 0 0 20px white, 0 0 30px purple;
+    }
+}
+
+.clock {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.clockbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.clockbox:hover {
+    transform: scale(1.1);
+}
+
+.timetext {
+    height: 100px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(102, 0, 255, 0.8), rgba(6, 2, 111, 0.8));
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.time {
+    width: 120px;
+    padding: 12px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#ampm {
+    background: green;
+}
+
+@media screen and (max-width: 600px) {
+    .degitalclock {
+        padding: 20px;
+    }
+
+    .degitalclock > h1 {
+        font-size: 35px;
+    }
+
+    .clock {
+        gap: 10px;
+    }
+
+    .timetext {
+        height: 70px;
+        width: 80px;
+        font-size: 30px;
+    }
+
+    .time {
+        width: 80px;
+        padding: 8px;
+        font-size: 14px;
+    }
+}
