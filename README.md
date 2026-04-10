@@ -14,7 +14,7 @@ A simple digital clock built using HTML, CSS and JavaScript.
 - JavaScript
 
 ## Live Demo
-https://Shubham-code05.github.io/digital-clock/
+https://shubham-code05.github.io/digital-clock/
 
 ## Screenshots
 
